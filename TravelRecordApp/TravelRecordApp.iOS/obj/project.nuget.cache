@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "yJ+sond9yRo49pAF2t9BSw4XCqeqtcsN3gsYuR6ouS5QU8ucHPKSEgGb6a8nS1iab62nlUaaUwGpTleon4AErA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jinan\\source\\repos\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.iOS\\TravelRecordApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jinan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\jinan\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\jinan\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
