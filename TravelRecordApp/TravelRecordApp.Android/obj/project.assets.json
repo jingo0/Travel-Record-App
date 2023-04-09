@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v13.0": {
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Plugin.CurrentActivity/2.1.0.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -2110,6 +2123,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.7.5",
           "Xamarin.Forms": "5.0.0.2578",
@@ -2126,6 +2140,36 @@
     }
   },
   "libraries": {
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "Plugin.CurrentActivity/2.1.0.2": {
       "sha512": "uiMbA0G1ulSEj7MtGUQDDhzw80+QgvH5ts+Yt9cyft1dF4Eb0tYxiXAgNPuohJXpxhZmRs+6ZjL6QBaL/wUKDQ==",
       "type": "package",
@@ -4154,14 +4198,6 @@
             "target": "Package",
             "version": "[4.5.0.6, )"
           },
-          "Xam.Plugin.Geolocator": {
-            "target": "Package",
-            "version": "[4.5.0.6, )"
-          },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.7.5, )"
-          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.5, )"
@@ -4170,21 +4206,9 @@
             "target": "Package",
             "version": "[5.0.0.2578, )"
           },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2578, )"
-          },
           "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[5.0.0.2578, )"
-          },
-          "Xamarin.Forms.Maps": {
-            "target": "Package",
-            "version": "[5.0.0.2578, )"
-          },
-          "sqlite-net-pcl": {
-            "target": "Package",
-            "version": "[1.8.116, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

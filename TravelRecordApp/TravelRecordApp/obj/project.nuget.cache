@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cyVC3HXEUgmAJGRtYlnMXRbuXJaWcX7vWQ2cyCkB0KnQtel7U+yUX6pWq9yO4R+1l+dg2O2pgjIj9Dxvxt8V1Q==",
+  "dgSpecHash": "4xeLosB6r9U0xI0dIc7hetPFEowsETJZ8ysvfyPJ19Aja4Uwtv0dUES3ckMkcBwl3wMevaBEFB4VfF65QJFlDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jinan\\source\\repos\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp\\TravelRecordApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jinan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\jinan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\jinan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\jinan\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\jinan\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "C:\\Users\\jinan\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
