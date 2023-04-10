@@ -4144,6 +4144,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v13.0": [
+      "Newtonsoft.Json >= 13.0.3",
       "TravelRecordApp >= 1.0.0",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Essentials >= 1.7.5",
@@ -4194,6 +4195,10 @@
     "frameworks": {
       "monoandroid13.0": {
         "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Xam.Plugin.Geolocator": {
             "target": "Package",
             "version": "[4.5.0.6, )"
