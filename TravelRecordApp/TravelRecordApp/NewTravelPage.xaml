@@ -8,27 +8,50 @@
     <ContentPage.Content>
         <StackLayout>
             <Entry x:Name="experienceEntry" Placeholder="Write your experience"/>
-            <ListView x:Name="venueListView" HorizontalOptions="FillAndExpand">
+            <ListView x:Name="venueListView"
+                      SeparatorVisibility="None"
+                      HorizontalOptions="FillAndExpand"
+                      RowHeight="90"
+                      >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Label Text="{Binding name}" FontAttributes="Bold"/>
-                                <Label Grid.Row="1" Text="{Binding location.address}"/>
-                                <Label Grid.Row="2" Text="{Binding location.distance}"/>
-                            </Grid>
+
+                            <ContentView Padding="2">
+                                <Frame
+                                    BorderColor="AntiqueWhite"
+                                    HasShadow="False"
+                                    Padding="0">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label
+                                            Margin="0,0,0,0"
+                                            Padding="0,-4,0,0"
+                                            FontSize="12"                                            
+                                            Text="{Binding name}"
+                                            TextColor="DodgerBlue"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Label
+                                            Margin="0,0,0,0"
+                                            Padding="0,-4,0,0"
+                                            Text="{Binding location.address}"
+                                            FontSize="10"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Label
+                                            Margin="0,0,0,0"
+                                            Padding="0,-4,0,0"
+                                            Text="{Binding distance, StringFormat='{0}m'}"
+                                            FontSize="10"
+                                            VerticalOptions="CenterAndExpand" />
+                                    </StackLayout>
+                                </Frame>
+                            </ContentView>
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+
             </ListView>
         </StackLayout>
     </ContentPage.Content>
+
 </ContentPage>

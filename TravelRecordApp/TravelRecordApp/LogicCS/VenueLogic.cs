@@ -1,42 +1,36 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using TravelRecordApp.Helpers;
 using TravelRecordApp.Model;
 
-namespace TravelRecordApp.LogicCS
+namespace TravelRecordApp.Logic
 {
-    internal class VenueLogic
+    public class VenueLogic
     {
-        public async static Task<List<VenueRoot>> GetVenues(double latitude,  double longitude)
+        public async static Task<List<Result>> GetVenues(double latitude, double longitude)
         {
-            List<VenueRoot> venues = new List<VenueRoot>();
+            //List<Venue> venues = new List<Venue>();
+            List<Result> venues = new List<Result>();
 
-            var url = VenueRoot.GenerateUrl(latitude, longitude);
+            var url = VenueRoot.GenerateURL(latitude, longitude);
 
-            using(HttpClient client = new HttpClient())
+            using (var client = new HttpClient())
             {
                 var request = new HttpRequestMessage(HttpMethod.Get, url);
 
                 request.Headers.Add("Accept", "application/json");
-
                 request.Headers.TryAddWithoutValidation("Authorization", Constants.API_KEY);
 
                 var response = await client.SendAsync(request, HttpCompletionOption.ResponseContentRead);
-
                 var json = await response.Content.ReadAsStringAsync();
 
-                var venueRoot = JsonConvert.DeserializeObject<VenueRoot>(json);
+                var venueResultSet = JsonConvert.DeserializeObject<Venue>(json).results;
 
-                venues = venueRoot.results as List<VenueRoot>;
-
+                venues = venueResultSet as List<Result>;
             }
-
-            //Debug.WriteLine(venues);
 
             return venues;
         }
