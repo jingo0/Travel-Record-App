@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
@@ -11,11 +12,11 @@ namespace TravelRecordApp.LogicCS
 {
     internal class VenueLogic
     {
-        public async static Task<List<Venue>> GetVenues(double latitude,  double longitude)
+        public async static Task<List<VenueRoot>> GetVenues(double latitude,  double longitude)
         {
-            List<Venue> venues = new List<Venue>();
+            List<VenueRoot> venues = new List<VenueRoot>();
 
-            var url = Venue.GenerateUrl(latitude, longitude);
+            var url = VenueRoot.GenerateUrl(latitude, longitude);
 
             using(HttpClient client = new HttpClient())
             {
@@ -28,10 +29,15 @@ namespace TravelRecordApp.LogicCS
                 var response = await client.SendAsync(request, HttpCompletionOption.ResponseContentRead);
 
                 var json = await response.Content.ReadAsStringAsync();
-                Debug.WriteLine(request);
-                Console.WriteLine("json: " + json);
+
+                var venueRoot = JsonConvert.DeserializeObject<VenueRoot>(json);
+
+                venues = venueRoot.results as List<VenueRoot>;
 
             }
+
+            //Debug.WriteLine(venues);
+
             return venues;
         }
     }
